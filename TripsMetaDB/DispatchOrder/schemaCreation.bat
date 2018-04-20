@@ -3,28 +3,26 @@ SETLOCAL ENABLEEXTENSIONS
 SET SCRIPT_NAME=%~n0
 SET SCRIPT_FOLDER=%~dp0
 
-SET TRIPSDBDEV=knxaosql2k160t.pilotcorp.net
-SET TRIPSDBQA=knxaosql2k160q.pilotcorp.net
-SET TRIPSDBUAT=knxsql2k16qa.pilotcorp.net
-SET TRIPSDB=knxaosql2k161.pilotcorp.net
-
-SET DB_NAME="TripsMetaDB"
-
-
+SET DB_NAME="Trips"
+SET configFile=pfj-gpdatabase-scripts\configFiles\serverDetails.properties
 cls
 
 IF [%1]==[] GOTO :BLANK
 
 IF %1==dev (
+	for /f "tokens=*" %%a in ('find /i "TRIPSDBDEV="^<%configFile%') do set %%a
 	SET DB_SERVER=%TRIPSDBDEV%
 	GOTO :RUN-SCRIPT
 ) ELSE IF %1==qa (
+	for /f "tokens=*" %%a in ('find /i "TRIPSDBQA="^<%configFile%') do set %%a
 	SET DB_SERVER=%TRIPSDBQA%
 	GOTO :RUN-SCRIPT
 ) ELSE IF %1==uat (
+	for /f "tokens=*" %%a in ('find /i "TRIPSDBUAT="^<%configFile%') do set %%a
 	SET DB_SERVER=%TRIPSDBUAT%
 	GOTO :RUN-SCRIPT
 ) ELSE IF %1==prod (
+	for /f "tokens=*" %%a in ('find /i "TRIPSDB="^<%configFile%') do set %%a
 	SET DB_SERVER=%TRIPSDB%
 	GOTO :RUN-SCRIPT
 ) ELSE (
