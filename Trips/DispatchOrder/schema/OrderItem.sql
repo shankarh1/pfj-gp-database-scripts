@@ -36,5 +36,7 @@ ALTER TABLE "DispatchOrder"."OrderItem" ALTER COLUMN "IsDeleted" SET DEFAULT fal
 
 ALTER TABLE "DispatchOrder"."OrderItem" ADD CONSTRAINT "PK_OrderItem" PRIMARY KEY ("OrderItemId");
 
-ALTER TABLE "DispatchOrder"."OrderItem" ADD CONSTRAINT "FK_OrderItem_Orders" FOREIGN KEY ("OrderId") REFERENCES "DispatchOrder"."Orders" ("OrderId") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "DispatchOrder"."OrderItem" ADD CONSTRAINT "FK_OrderItem_Order" FOREIGN KEY ("OrderId") REFERENCES "DispatchOrder"."Order" ("OrderId")
+ON DELETE CASCADE
+ON UPDATE CASCADE;
 
