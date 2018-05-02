@@ -1,7 +1,7 @@
 -- =============================================
 -- Author:      Hanumanthaswamy D S
--- Create date: 2018-04-19
--- Description:	Create Loads table
+-- Create date: 2018-05-02
+-- Description:	Create Load table
 -- =============================================
 
 

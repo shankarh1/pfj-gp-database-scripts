@@ -21,3 +21,5 @@ CREATE TABLE "TripsMetaDB"."Zone"(
 
 ALTER TABLE "TripsMetaDB"."Zone" ADD CONSTRAINT "PK_Zone" PRIMARY KEY("ZoneId");
 
+ALTER TABLE "TripsMetaDB"."Zone" ALTER COLUMN "IsActive" SET DEFAULT false;
+

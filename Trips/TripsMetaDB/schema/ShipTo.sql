@@ -35,6 +35,8 @@ CREATE TABLE "TripsMetaDB"."ShipTo"(
 
 ALTER TABLE "TripsMetaDB"."ShipTo" ADD CONSTRAINT "PK_ShipTo" PRIMARY KEY("ShipToId");
 
+ALTER TABLE "TripsMetaDB"."ShipTo" ALTER COLUMN "IsActive" SET DEFAULT false;
+
 ALTER TABLE "TripsMetaDB"."ShipTo" ADD CONSTRAINT "FK_ShipTo_ShipToType" FOREIGN KEY("ShipToTypeId")
 REFERENCES "TripsMetaDB"."ShipToType" ("ShipToTypeId")
 ON UPDATE CASCADE

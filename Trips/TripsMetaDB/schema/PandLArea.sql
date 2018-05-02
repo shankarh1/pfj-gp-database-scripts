@@ -24,3 +24,5 @@ CREATE TABLE "TripsMetaDB"."PandLArea"(
 
 ALTER TABLE "TripsMetaDB"."PandLArea" ADD CONSTRAINT "PK_PandLArea" PRIMARY KEY("PandLAreaId");
 
+ALTER TABLE "TripsMetaDB"."PandLArea" ALTER COLUMN "IsActive" SET DEFAULT false;
+

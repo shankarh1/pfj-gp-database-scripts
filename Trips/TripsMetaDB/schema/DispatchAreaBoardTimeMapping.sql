@@ -19,6 +19,8 @@ CREATE TABLE "TripsMetaDB"."DispatchAreaBoardTimeMapping"(
 
 ALTER TABLE "TripsMetaDB"."DispatchAreaBoardTimeMapping" ADD CONSTRAINT "PK_DispatchAreaBoardTimeMapping" PRIMARY KEY("DispatchAreaBoardTimeId");
 
+ALTER TABLE "TripsMetaDB"."DispatchAreaBoardTimeMapping" ALTER COLUMN "IsActive" SET DEFAULT false;
+
 ALTER TABLE "TripsMetaDB"."DispatchAreaBoardTimeMapping" ADD CONSTRAINT "FK_DispatchAreaBoardTimeMapping_DispatchArea" FOREIGN KEY("DispatchAreaId")
 REFERENCES "TripsMetaDB"."DispatchArea" ("DispatchAreaId")
 ON UPDATE CASCADE

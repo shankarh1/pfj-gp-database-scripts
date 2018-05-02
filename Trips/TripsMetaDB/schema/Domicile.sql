@@ -28,6 +28,8 @@ CREATE TABLE "TripsMetaDB"."Domicile"(
 
 ALTER TABLE "TripsMetaDB"."Domicile" ADD CONSTRAINT "PK_Domicile" PRIMARY KEY("DomicileId");
 
+ALTER TABLE "TripsMetaDB"."Domicile" ALTER COLUMN "IsDeleted" SET DEFAULT false;
+
 ALTER TABLE "TripsMetaDB"."Domicile" ADD CONSTRAINT "FK_Domicile_DomicileType" FOREIGN KEY("DomicileTypeId")
 REFERENCES "TripsMetaDB"."DomicileType" ("DomicileTypeId")
 ON UPDATE CASCADE

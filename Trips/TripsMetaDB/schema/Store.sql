@@ -22,3 +22,5 @@ CREATE TABLE "TripsMetaDB"."Store"(
 
 ALTER TABLE "TripsMetaDB"."Store" ADD CONSTRAINT "PK_Store" PRIMARY KEY("StoreId");
 
+ALTER TABLE "TripsMetaDB"."Store" ALTER COLUMN "IsActive" SET DEFAULT false;
+

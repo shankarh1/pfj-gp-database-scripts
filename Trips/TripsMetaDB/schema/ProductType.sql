@@ -20,5 +20,5 @@ CREATE TABLE "TripsMetaDB"."ProductType"(
 	"LastUpdatedDateTime" timestamp NULL
 );
 
-ALTER TABLE "TripsMetaDB"."ProductType" ADD CONSTRAINT "PK_ProductType" PRIMARY KEY(ProductTypeId);
+ALTER TABLE "TripsMetaDB"."ProductType" ADD CONSTRAINT "PK_ProductType" PRIMARY KEY("ProductTypeId");
 
