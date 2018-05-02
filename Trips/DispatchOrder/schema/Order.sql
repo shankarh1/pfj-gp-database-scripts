@@ -1,11 +1,11 @@
 -- =============================================
 -- Author:      Hanumanthaswamy D S
 -- Create date: 2018-04-19
--- Description: Create Orders table
+-- Description: Create Order table
 -- =============================================
 
 
-CREATE TABLE "DispatchOrder"."Orders"(
+CREATE TABLE "DispatchOrder"."Order"(
   "OrderId" serial NOT NULL,
   "OrderTypeId" integer NOT NULL,
   "OrderCreationTypeId" integer NOT NULL,
@@ -31,7 +31,9 @@ CREATE TABLE "DispatchOrder"."Orders"(
   "LastUpdatedDateTime" timestamp NULL
 );
 
-ALTER TABLE "DispatchOrder"."Orders" ADD CONSTRAINT "PK_Orders" PRIMARY KEY ("OrderId");
+ALTER TABLE "DispatchOrder"."Order" ADD CONSTRAINT "PK_Order" PRIMARY KEY ("OrderId");
 
-ALTER TABLE "DispatchOrder"."Orders" ADD CONSTRAINT "FK_Orders_Loads" FOREIGN KEY ("LoadId") REFERENCES "DispatchOrder"."Loads" ("LoadId") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "DispatchOrder"."Order" ADD CONSTRAINT "FK_Order_Load" FOREIGN KEY ("LoadId") REFERENCES "DispatchOrder"."Load" ("LoadId")
+ON DELETE CASCADE
+ON UPDATE CASCADE;
 

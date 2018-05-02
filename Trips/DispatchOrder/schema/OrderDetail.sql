@@ -42,5 +42,7 @@ CREATE TABLE "DispatchOrder"."OrderDetail"(
 
 ALTER TABLE "DispatchOrder"."OrderDetail" ADD CONSTRAINT "PK_OrderDetail" PRIMARY KEY ("OrderDetailId");
 
-ALTER TABLE "DispatchOrder"."OrderDetail" ADD CONSTRAINT "FK_OrderDetail_Orders" FOREIGN KEY ("OrderId") REFERENCES "DispatchOrder"."Orders" ("OrderId") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "DispatchOrder"."OrderDetail" ADD CONSTRAINT "FK_OrderDetail_Order" FOREIGN KEY ("OrderId") REFERENCES "DispatchOrder"."Order" ("OrderId") 
+ON DELETE CASCADE
+ON UPDATE CASCADE;
 

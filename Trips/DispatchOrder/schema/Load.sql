@@ -5,7 +5,7 @@
 -- =============================================
 
 
-CREATE TABLE "DispatchOrder"."Loads"(
+CREATE TABLE "DispatchOrder"."Load"(
   "LoadId" serial NOT NULL,
   "LoadNumber" integer NULL,
   "CreatedBy" integer NOT NULL,
@@ -14,5 +14,5 @@ CREATE TABLE "DispatchOrder"."Loads"(
   "LastUpdatedDateTime" timestamp NULL
 );
 
-ALTER TABLE "DispatchOrder"."Loads" ADD CONSTRAINT "PK_Loads" PRIMARY KEY ("LoadId");
+ALTER TABLE "DispatchOrder"."Load" ADD CONSTRAINT "PK_Load" PRIMARY KEY ("LoadId");
 
