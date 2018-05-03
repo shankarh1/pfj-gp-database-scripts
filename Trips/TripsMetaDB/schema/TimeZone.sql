@@ -19,3 +19,5 @@ CREATE TABLE "TripsMetaDB"."TimeZone"(
 
 ALTER TABLE "TripsMetaDB"."TimeZone" ADD CONSTRAINT "PK_TimeZone" PRIMARY KEY("TimeZoneId");
 
+ALTER TABLE "TripsMetaDB"."TimeZone" ALTER COLUMN "IsDstApplicable" SET DEFAULT false;
+

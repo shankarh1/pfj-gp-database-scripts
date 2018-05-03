@@ -53,6 +53,8 @@ CREATE TABLE "TripsMetaDB"."Driver"(
 
 ALTER TABLE "TripsMetaDB"."Driver" ADD CONSTRAINT "PK_Driver" PRIMARY KEY("DriverId");
 
+ALTER TABLE "TripsMetaDB"."Driver" ALTER COLUMN "IsActive" SET DEFAULT false;
+
 ALTER TABLE "TripsMetaDB"."Driver" ADD CONSTRAINT "FK_Driver_DriverType" FOREIGN KEY("DriverTypeId") REFERENCES "TripsMetaDB"."DriverType" ("DriverTypeId")
 ON UPDATE CASCADE
 ON DELETE CASCADE;

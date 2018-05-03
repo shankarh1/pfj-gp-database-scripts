@@ -25,3 +25,5 @@ CREATE TABLE "TripsMetaDB"."RegionSupervisor"(
 
 ALTER TABLE "TripsMetaDB"."RegionSupervisor" ADD CONSTRAINT "PK_RegionSupervisor" PRIMARY KEY("RegionSupervisorId");
 
+ALTER TABLE "TripsMetaDB"."RegionSupervisor" ALTER COLUMN "IsActive" SET DEFAULT false;
+

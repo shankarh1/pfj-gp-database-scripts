@@ -19,3 +19,5 @@ CREATE TABLE "TripsMetaDB"."Department"(
 
 ALTER TABLE "TripsMetaDB"."Department" ADD CONSTRAINT "PK_Department" PRIMARY KEY("DepartmentId");
 
+ALTER TABLE "TripsMetaDB"."Department" ALTER COLUMN "IsActive" SET DEFAULT true;
+

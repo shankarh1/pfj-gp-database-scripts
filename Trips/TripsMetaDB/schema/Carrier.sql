@@ -25,3 +25,5 @@ CREATE TABLE "TripsMetaDB"."Carrier"(
 
 ALTER TABLE "TripsMetaDB"."Carrier" ADD CONSTRAINT "PK_Carrier" PRIMARY KEY("CarrierId");
 
+ALTER TABLE "TripsMetaDB"."Carrier" ALTER COLUMN "IsActive" SET DEFAULT false;
+
