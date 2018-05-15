@@ -14,7 +14,7 @@ CREATE TABLE "DispatchOrder"."State"(
 
 ALTER TABLE "DispatchOrder"."State" ADD CONSTRAINT "PK_State" PRIMARY KEY("StateId");
 
-ALTER TABLE "DispatchOrder"."State" ADD CONSTRAINT "FK_State_Country" FOREIGN KEY("CountryId") REFERENCES "TripsMetaDB"."Country" ("CountryId")
+ALTER TABLE "DispatchOrder"."State" ADD CONSTRAINT "FK_State_Country" FOREIGN KEY("CountryId") REFERENCES "DispatchOrder"."Country" ("CountryId")
 ON UPDATE CASCADE
 ON DELETE CASCADE;
 

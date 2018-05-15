@@ -40,6 +40,6 @@ ALTER TABLE "DispatchOrder"."Terminal" ADD CONSTRAINT "PK_Terminal" PRIMARY KEY 
 
 ALTER TABLE "DispatchOrder"."Terminal" ALTER COLUMN "IsActive" SET DEFAULT false;
 
-ALTER TABLE "DispatchOrder"."Terminal" ADD CONSTRAINT "FK_Terminal_TerminalType" FOREIGN KEY ("TerminalTypeId") REFERENCES "TripsMetaDB"."TerminalType" ("TerminalTypeId") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "DispatchOrder"."Terminal" ADD CONSTRAINT "FK_Terminal_TerminalType" FOREIGN KEY ("TerminalTypeId") REFERENCES "DispatchOrder"."TerminalType" ("TerminalTypeId") ON DELETE CASCADE ON UPDATE CASCADE;
 
 

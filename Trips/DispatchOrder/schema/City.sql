@@ -13,7 +13,7 @@ CREATE TABLE "DispatchOrder"."City"(
 
 ALTER TABLE "DispatchOrder"."City" ADD CONSTRAINT "PK_City" PRIMARY KEY("CityId");
 
-ALTER TABLE "DispatchOrder"."City" ADD CONSTRAINT "FK_City_State" FOREIGN KEY("StateId") REFERENCES "TripsMetaDB"."State" ("StateId")
+ALTER TABLE "DispatchOrder"."City" ADD CONSTRAINT "FK_City_State" FOREIGN KEY("StateId") REFERENCES "DispatchOrder"."State" ("StateId")
 ON UPDATE CASCADE
 ON DELETE CASCADE
 

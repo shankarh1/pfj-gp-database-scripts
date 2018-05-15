@@ -1,11 +1,11 @@
 -- =============================================
 -- Author:      Hanumanthaswamy D S
--- Create date: 2018-05-02
+-- Create date: 2018-05-03
 -- Description:	Create ProductType table
 -- =============================================
 
 
-CREATE TABLE "DispatchOrder"."ProductType"(
+CREATE TABLE "TankSale"."ProductType"(
 	"ProductTypeId" serial NOT NULL,
 	"Name" varchar(100) NULL,
 	"WraProductLongName" varchar(100) NULL,
@@ -15,10 +15,10 @@ CREATE TABLE "DispatchOrder"."ProductType"(
 	"ColorName" varchar(50) NULL,
 	"ColorCode" varchar(50) NULL,
 	"CreatedBy" integer NOT NULL,
-	"CreatedDateTime" timestamp NOT NULL,
+	"CreatedDateTime" timestamp(6) NOT NULL,
 	"LastUpdatedBy" integer NULL,
-	"LastUpdatedDateTime" timestamp NULL
+	"LastUpdatedDateTime" timestamp(6) NULL
 );
 
-ALTER TABLE "DispatchOrder"."ProductType" ADD CONSTRAINT "PK_ProductType" PRIMARY KEY("ProductTypeId");
+ALTER TABLE "TankSale"."ProductType" ADD CONSTRAINT "PK_ProductType" PRIMARY KEY("ProductTypeId");
 

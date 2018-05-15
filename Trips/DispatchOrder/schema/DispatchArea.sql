@@ -21,7 +21,7 @@ ALTER TABLE "DispatchOrder"."DispatchArea" ADD CONSTRAINT "DispatchAreaId" PRIMA
 
 ALTER TABLE "DispatchOrder"."DispatchArea" ALTER COLUMN "IsActive" SET DEFAULT false;
 
-ALTER TABLE "DispatchOrder"."DispatchArea" ADD CONSTRAINT "FK_DispatchArea_TimeZone" FOREIGN KEY("TimeZoneId") REFERENCES "TripsMetaDB"."TimeZone" ("TimeZoneId")
+ALTER TABLE "DispatchOrder"."DispatchArea" ADD CONSTRAINT "FK_DispatchArea_TimeZone" FOREIGN KEY("TimeZoneId") REFERENCES "DispatchOrder"."TimeZone" ("TimeZoneId")
 ON UPDATE CASCADE
 ON DELETE CASCADE;
 
